@@ -23,7 +23,7 @@ for article in data['result'][::-1]:
     if int(id) > int(articles):
         t = "#" + s + "\n\n<a href='" + html_link + "'>" + title + "</a>\n"
         if article['attachment_link'] is not None: t = t + '<a href ="' + article['attachment_link'] + '">ضـمائـم</a>'
-        t = t + '\nمنتشر شده در تاريخ:' + date
+        t = t + '\nمنتشر شده در تاريخ: ' + date
         tg = post(url='https://api.telegram.org/bot{token}/sendMessage?chat_id=@asarmaye&parse_mode=HTML', verify=False, data={"text": t})
         sleep(4)
     else:
